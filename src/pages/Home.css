@@ -1,0 +1,200 @@
+.home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.hero {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 4rem 0 3rem;
+}
+
+@media (min-width: 840px) {
+  .hero {
+    grid-template-columns: 1.1fr 1fr;
+    padding: 5rem 0 4rem;
+  }
+}
+
+.hero__text h1 {
+  font-size: clamp(1.9rem, 3vw + 1.2rem, 2.75rem);
+  max-width: 14ch;
+}
+
+.hero__text p {
+  font-size: 1.05rem;
+}
+
+.pick-ticket {
+  --pad: 1.5rem;
+  padding: var(--pad);
+  background: var(--surface);
+  border: 1px solid rgba(232, 163, 61, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 20px 60px -20px rgba(232, 163, 61, 0.25);
+}
+
+.pick-ticket__league {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.pick-ticket__teams {
+  font-size: 1.3rem;
+  margin: 0.25rem 0;
+}
+
+.pick-ticket__vs {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.85em;
+  color: var(--text-dim);
+}
+
+.pick-ticket__kickoff {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.pick-ticket__divider {
+  position: relative;
+  height: 0;
+  border-top: 1px dashed rgba(237, 234, 226, 0.25);
+  margin: 1.25rem calc(-1 * var(--pad));
+}
+
+.pick-ticket__divider::before,
+.pick-ticket__divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: var(--bg);
+  border-radius: 50%;
+}
+
+.pick-ticket__divider::before {
+  left: -9px;
+}
+
+.pick-ticket__divider::after {
+  right: -9px;
+}
+
+.pick-ticket__market {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.pick-ticket__stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pick-ticket__confidence {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.pick-ticket__risk {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.pick-ticket__risk--low {
+  color: var(--green);
+  background: rgba(79, 161, 132, 0.15);
+}
+
+.pick-ticket__risk--medium {
+  color: var(--gold);
+  background: rgba(232, 163, 61, 0.15);
+}
+
+.pick-ticket__risk--high {
+  color: var(--red);
+  background: rgba(196, 82, 62, 0.15);
+}
+
+.pick-ticket__reasoning {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.picks-list {
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(237, 234, 226, 0.08);
+}
+
+.picks-list h2 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin: 0 0 0.75rem;
+}
+
+.pick-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(237, 234, 226, 0.08);
+}
+
+.pick-row:last-child {
+  border-bottom: none;
+}
+
+.pick-row__teams {
+  font-weight: 600;
+  margin: 0;
+}
+
+.pick-row__market {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin: 0.15rem 0 0;
+}
+
+.pick-row__confidence {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.pick-row__result {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.pick-row__result--won {
+  color: var(--green);
+  background: rgba(79, 161, 132, 0.12);
+}
+
+.pick-row__result--lost {
+  color: var(--red);
+  background: rgba(196, 82, 62, 0.12);
+}
+
+.pick-row__result--void {
+  color: var(--text-dim);
+  background: rgba(156, 166, 160, 0.12);
+}
