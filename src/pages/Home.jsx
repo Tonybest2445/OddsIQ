@@ -1,3 +1,4 @@
+import './Home.css'
 import { picks } from '../data/picks'
 
 function formatKickoff(iso) {
