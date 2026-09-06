@@ -4,17 +4,45 @@
   padding: 0 1.5rem 4rem;
 }
 
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.site-header__logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.site-header__account {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(237, 234, 226, 0.2);
+  border-radius: 999px;
+}
+
+.site-header__account:hover {
+  text-decoration: none;
+  border-color: var(--gold);
+}
+
 .hero {
   display: grid;
   gap: 2.5rem;
   align-items: center;
-  padding: 4rem 0 3rem;
+  padding: 2.5rem 0 3rem;
 }
 
 @media (min-width: 840px) {
   .hero {
     grid-template-columns: 1.1fr 1fr;
-    padding: 5rem 0 4rem;
+    padding: 3rem 0 4rem;
   }
 }
 
