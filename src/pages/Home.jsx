@@ -1,4 +1,5 @@
 import './Home.css'
+import { Link } from 'react-router-dom'
 import { picks } from '../data/picks'
 
 function formatKickoff(iso) {
@@ -70,6 +71,9 @@ function Home() {
             Every pick shows its confidence, its risk, and the reasoning behind
             it — plus a public record of what actually happened.
           </p>
+          <Link to="/build-combo" className="hero__cta">
+            Build a combo
+          </Link>
         </div>
         {topPick && <PickTicket pick={topPick} />}
       </section>
