@@ -1,0 +1,81 @@
+.account {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.account h1 {
+  font-size: clamp(1.7rem, 2vw + 1.2rem, 2.25rem);
+  margin-bottom: 1.5rem;
+}
+
+.account__email {
+  color: var(--text-dim);
+  margin-bottom: 1.5rem;
+}
+
+.account__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.account__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.account__form input {
+  padding: 0.75rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid rgba(237, 234, 226, 0.15);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.account__form input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.account__error {
+  color: var(--red);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.account__form button,
+.account > button {
+  padding: 0.85rem;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.account__form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.account__toggle {
+  display: block;
+  margin-top: 1.25rem;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
