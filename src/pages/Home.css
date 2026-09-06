@@ -27,6 +27,22 @@
   font-size: 1.05rem;
 }
 
+.hero__cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  background: var(--gold);
+  color: var(--bg);
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero__cta:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
 .pick-ticket {
   --pad: 1.5rem;
   padding: var(--pad);
