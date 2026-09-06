@@ -1,6 +1,7 @@
 import './Home.css'
 import { Link } from 'react-router-dom'
 import { picks } from '../data/picks'
+import { useAuth } from '../lib/AuthContext'
 
 function formatKickoff(iso) {
   return new Date(iso).toLocaleString('en-GB', {
@@ -56,6 +57,7 @@ function PickRow({ pick }) {
 }
 
 function Home() {
+  const { user } = useAuth()
   const pending = picks
     .filter((p) => p.status === 'pending')
     .sort((a, b) => b.confidence - a.confidence)
@@ -64,6 +66,13 @@ function Home() {
 
   return (
     <main className="home">
+      <header className="site-header">
+        <span className="site-header__logo">OddsIQ</span>
+        <Link to="/account" className="site-header__account">
+          {user ? 'Account' : 'Log in'}
+        </Link>
+      </header>
+
       <section className="hero">
         <div className="hero__text">
           <h1>Football and basketball picks, graded before kickoff.</h1>
