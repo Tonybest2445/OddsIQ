@@ -1,0 +1,139 @@
+.build-combo {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+}
+
+.build-combo h1 {
+  font-size: clamp(1.7rem, 2vw + 1.2rem, 2.25rem);
+}
+
+.build-combo > p {
+  margin-bottom: 2rem;
+}
+
+.combo-picks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.combo-pick {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid rgba(237, 234, 226, 0.1);
+  border-radius: 10px;
+  text-align: left;
+  font-family: var(--font-body);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.combo-pick:hover {
+  border-color: rgba(232, 163, 61, 0.4);
+}
+
+.combo-pick--selected {
+  border-color: var(--gold);
+  background: rgba(232, 163, 61, 0.08);
+}
+
+.combo-pick__teams {
+  font-weight: 600;
+  margin: 0;
+}
+
+.combo-pick__market {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+.combo-pick__kickoff {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.combo-pick__odds {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.combo-summary {
+  position: sticky;
+  bottom: 1.5rem;
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid rgba(232, 163, 61, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.5);
+}
+
+.combo-summary__count {
+  margin: 0 0 0.25rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.combo-summary__odds {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.combo-error {
+  color: var(--red);
+  font-size: 0.9rem;
+  margin: 0 0 1rem;
+}
+
+.combo-summary button,
+.combo-result button {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.combo-summary button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.combo-result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid rgba(79, 161, 132, 0.3);
+  border-radius: 10px;
+}
+
+.combo-result code {
+  word-break: break-all;
+  font-size: 0.95rem;
+  color: var(--green);
+}
+
+.combo-result button {
+  width: auto;
+  align-self: flex-start;
+  padding: 0.6rem 1.25rem;
+}
