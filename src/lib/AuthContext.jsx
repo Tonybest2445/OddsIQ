@@ -25,7 +25,18 @@ export function AuthProvider({ children }) {
   const value = {
     user,
     loading,
-    signUp: (email, password) => supabase.auth.signUp({ email, password }),
+    signUp: async (email, password) => {
+      const referredBy = localStorage.getItem('oddsiq_referred_by')
+      const result = await supabase.auth.signUp({
+        email,
+        password,
+        options: referredBy ? { data: { referred_by: referredBy } } : undefined,
+      })
+      if (!result.error) {
+        localStorage.removeItem('oddsiq_referred_by')
+      }
+      return result
+    },
     signIn: (email, password) => supabase.auth.signInWithPassword({ email, password }),
     signOut: () => supabase.auth.signOut(),
   }
