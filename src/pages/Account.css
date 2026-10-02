@@ -41,6 +41,45 @@
   margin-bottom: 1rem !important;
 }
 
+.account__referral {
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid rgba(232, 163, 61, 0.2);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.account__referral > p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin: 0 0 0.85rem;
+}
+
+.account__referral-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.account__referral-row code {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  color: var(--gold);
+  padding: 0.6rem 0.75rem;
+  background: var(--bg);
+  border-radius: 8px;
+}
+
+.account__referral-row button {
+  flex-shrink: 0;
+  width: auto;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
 .account__form {
   display: flex;
   flex-direction: column;
