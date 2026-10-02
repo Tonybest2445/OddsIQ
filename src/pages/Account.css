@@ -14,6 +14,33 @@
   margin-bottom: 1.5rem;
 }
 
+.account__tier {
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid rgba(237, 234, 226, 0.1);
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.account__tier--pro {
+  border-color: rgba(79, 161, 132, 0.3);
+}
+
+.account__tier p {
+  margin: 0 0 0.5rem;
+}
+
+.account__expires {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.account__upsell {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 1rem !important;
+}
+
 .account__form {
   display: flex;
   flex-direction: column;
@@ -46,11 +73,12 @@
 .account__error {
   color: var(--red);
   font-size: 0.9rem;
-  margin: 0;
+  margin: 0 0 1rem;
 }
 
 .account__form button,
-.account > button {
+.account__tier button,
+.account__signout {
   padding: 0.85rem;
   background: var(--gold);
   color: var(--bg);
@@ -60,9 +88,17 @@
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
+  width: 100%;
 }
 
-.account__form button:disabled {
+.account__signout {
+  background: transparent;
+  border: 1px solid rgba(237, 234, 226, 0.2);
+  color: var(--text);
+}
+
+.account__form button:disabled,
+.account__tier button:disabled {
   opacity: 0.6;
   cursor: default;
 }
