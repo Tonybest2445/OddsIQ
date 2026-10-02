@@ -68,9 +68,12 @@ function Home() {
     <main className="home">
       <header className="site-header">
         <span className="site-header__logo">OddsIQ</span>
-        <Link to="/account" className="site-header__account">
-          {user ? 'Account' : 'Log in'}
-        </Link>
+        <nav className="site-header__nav">
+          <Link to="/blog" className="site-header__link">Blog</Link>
+          <Link to="/account" className="site-header__account">
+            {user ? 'Account' : 'Log in'}
+          </Link>
+        </nav>
       </header>
 
       <section className="hero">
