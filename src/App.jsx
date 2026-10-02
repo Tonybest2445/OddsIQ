@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './lib/AuthContext'
 import Home from './pages/Home'
@@ -8,6 +9,14 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 
 function App() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const ref = params.get('ref')
+    if (ref) {
+      localStorage.setItem('oddsiq_referred_by', ref)
+    }
+  }, [])
+
   return (
     <AuthProvider>
       <Routes>
